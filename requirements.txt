@@ -1,0 +1,4 @@
+Eel==0.17.0
+moviepy==1.0.3
+pytubefix==6.15.0
+easygui==0.98.3
