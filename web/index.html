@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Downloader</title>
+    <meta name="theme-color" content="blue">
+    <link rel="icon" type="image/png" href="youtubelogo.png">
+    <script type="text/javascript" src="/eel.js"></script>
+
+    <link rel="stylesheet" href="w3.css">
+    <style>
+        section {
+            margin: 25px auto;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            }
+
+        .loader {
+            border: 16px solid #f3f3f3; /* Light grey */
+            border-top: 16px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+            }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+            }
+    </style>
+</head>
+<body>
+    <main class="w3-light-grey" style="height : 100vh;">
+        <section class="w3-container w3-dark-grey" style="margin-top: 0; color: whitesmoke;">
+            <div class="flex-container w3-padding-24" style="align-items: center;">
+                <img src="youtubelogo.png" alt="..." width="60px" height="50px" class="" />
+                <h3 class="w3-margin-top w3-padding-large" style="color: #ffffff;">YT Downloader</h3>
+            </div>
+        </section>
+
+        <section class="w3-container w3-margin-top">
+            <div class="flex-container w3-margin-bottom shadow" id="yt_form">
+                <input type="url" class="w3-input w3-light-grey" id="yt_url" placeholder="Enter YouTube Link"/>
+                <button class="w3-btn w3-dark-grey" type="button" id="yt_btn" style="padding-right: 30px;">Search</button>
+            </div>
+        </section>
+
+        <section class="w3-container">
+            <div>
+                <h5 class="w3-center" id="yt_video_title"></h5>
+                <p class="w3-center" style="color:green; overflow-x: auto;" id="yt_success_message"></p>
+                <p class="w3-center" style="color: red; overflow-x: auto;" id="yt_error_message"></p>
+
+                <div class="flex-container">
+                    <div class="loader" id="yt_loading"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w3-container w3-margin-bottom" id="result_section">
+
+        </section>
+
+        <br/>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
